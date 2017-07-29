@@ -1,0 +1,68 @@
+{
+  "00001": {
+  "id": "1",
+  "content": {
+    "title": "Mr.Cat",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Иннокентий Михайлов",
+    "img": "img/places/place-5.jpg"
+   }
+  },
+  "00002": {
+  "id": "2",
+  "content": {
+    "title": "Челюскинцев",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Валерий Осипов",
+    "img": "img/places/place-2.jpg"
+    }
+  },
+  "00003":{
+  "id": "3",
+  "content": {
+    "title": "Клуб Полезного Действия",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Валерий Осипов",
+    "img": "img/places/place-3.jpg"
+    }
+  },
+    "00004":{
+  "id": "4",
+  "content": {
+    "title": "Freelance Cafe",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Валерий Осипов",
+    "img": "img/places/place-4.jpg"
+    }
+  },
+    "00005":{
+  "id": "5",
+  "content": {
+    "title": "Лаборатория Касперского",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Валерий Осипов",
+    "img": "img/places/place-5.jpg"
+    }
+  },
+    "00006":{
+  "id": "6",
+  "content": {
+    "title": "IT-office",
+    "descr" : "Какое-то описание",
+    "url": "https://www.facebook.com/fdfp.spb",
+    "adress": "Санкт-Петербург, Васильевский остров, Невский проспект, дом.88, копрус 20,<br> офис 17",
+    "contactName": "Валерий Осипов",
+    "img": "img/places/place-6.jpg"
+    }
+  }
+}
