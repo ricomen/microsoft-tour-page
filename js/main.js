@@ -25,7 +25,7 @@
   function getPlaceDescr(id) {
 
     let out;
-    xhr.open("get", "data.json", false);
+    xhr.open("get", "/data.json", false);
 
     xhr.send();
 
