@@ -5,41 +5,42 @@
     guideMenu.classList.toggle("guide__menu--show")
   });
 
-
-
   let tiles = document.querySelectorAll(".tile[data-place-id]");
-  // console.log(tiles);
 
   for(let i = 0; tiles.length > i; i++) {
     tiles[i].addEventListener("click", descriptionBlock);
   };
 
-  function descriptionBlock() {  
+  function descriptionBlock() {
     let destination = document.querySelector("#location-info")
-    console.log(destination);
+
     let descr = getPlaceDescr(this.getAttribute('data-place-id'));
+
     insertBlockToDom(destination, createBlock(descr));
   }
-  
+
   //loadPlaceDescription  
   let xhr = new XMLHttpRequest();
 
   function getPlaceDescr(id) {
 
-    let out;  
+    let out;
     xhr.open("get", "data.json", false);
+
     xhr.send();
+
     let xhrAnswer = JSON.parse(xhr.responseText);
-    // console.log(xhrAnswer);
-    for( let key in xhrAnswer ) {      
+
+    for( let key in xhrAnswer ) {
       if( xhrAnswer[key]['id'] === id) {
         out = xhrAnswer[key];
-      }      
+      }
     }
     return out;
 
   }
-  //create Element
+
+  //create Block
   function createBlock(data) {
     let block = `
       <div class="col-sm-12 col-lg-6">
@@ -68,15 +69,18 @@
   //ВСТАВКА БЛОКА В дом LOCATION - КУДА вставляем, что вставляем
   function insertBlockToDom(location, block) {
     location.innerHTML = "";
-    location.classList.remove("hide");    
+    location.classList.remove("hide");
     location.innerHTML = block;
     let descrClose = document.querySelector(".tile-descr-close");
     descrClose.addEventListener('click', closeDescrBlock);
   }  
 
   function closeDescrBlock() {
+
     document.querySelector("#location-info").classList.add("hide")
+
     document.querySelector("#location-info").innerHTML = "";
-    console.log(this);
+    
   }
+
 })();
