@@ -1,14 +1,3 @@
-// //jQuery begin
-// $(document).ready(function() {
-
-// });
-// $(window).load(function() {
-//   /* Act on the event */
-// });
-// //jQuery end
-// (function($){
-  
-// })(jQuery);
 (function() {
   let guideMenu = document.querySelector(".guide__menu");
   
