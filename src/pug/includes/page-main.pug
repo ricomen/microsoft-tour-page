@@ -1,0 +1,61 @@
+-var cities = ["Минск","Нижний Новгород","Новосибирск","Пермь","Ростов-на-Дону","Санкт-Петербург","Самара","Казань","Таганрог"];
+mixin tile(placeName, city, imgName, id)
+  //- - className = className || ""
+  - imgName = imgName || ""
+  - id = id || ""  
+  article.tile(class= className style="background-image:url(img/places/" + imgName +
+    ".jpg)" href="javascript: void(0)" data-place-id= ""+ id + "")
+    .tile__content
+      .tile__place-name #{placeName}
+      .tile__city-name #{city}
+
+
+section.guide
+  .container
+    h2.guide__title Путеводитель
+    .guide__wrapper
+      .guide__menu Выберите <a class="guide__menu-dropdown-trigger" href="javascript: void(0);" role="dropdown">город</a>
+        input(hidden)
+        .guide__menu-dropdown
+          ul.guide__menu-list  
+            for city in cities
+              li.guide__menu-item
+                a(href="/")= city
+          ul.guide__menu-list  
+            for city in cities
+              li.guide__menu-item
+                a(href="/")= city
+          ul.guide__menu-list
+            li.guide__menu-item
+              a(href="/") Минск
+            li.guide__menu-item
+              a(href="/") Нижний Новгород
+            li.guide__menu-item
+              a(href="/") Новосибирск
+            li.guide__menu-item
+              a(href="/") Пермь
+            li.guide__menu-item
+              a(href="/") Ростов-на-Дону 
+    .tile-grid
+      .tile-grid__row.row
+        .tile-grid__item.col-sm-6.col-lg-3.col-sm-push-6.col-lg-push-9
+          .tile.tile--new-place
+            .tile__content
+              img.tile__img(width="70" height="89" src="img/human.png")
+              h2.tile__title Добавить <br>свое место!
+              .tile__bottom
+                a.btn.tile__btn(href="") Добавить место
+        .tile-grid__item.col-sm-6.col-lg-3.col-sm-pull-6.col-lg-pull-3
+          +tile("Mr. Cat", "Астана", "place-5", 1)
+        .tile-grid__item.col-sm-6.col-lg-3.col-lg-pull-3
+          +tile("Челюскинцев", "Воронеж", "place-3", 2)
+        .tile-grid__item.col-sm-6.col-lg-3.col-lg-pull-3
+          +tile("Клуб Полезного Действия", "Санкт-Петербург", "place-6", 3)
+      .tile-grid__row.row(id="location-info")
+      .tile-grid__row.row
+        .tile-grid__item.col-sm-6.col-lg-3
+          +tile("Freelance Cafe", "Екатеринбург", "place-1", 4)
+        .tile-grid__item.col-sm-6.col-lg-3
+          +tile("Лаборатория Касперского", "Новосибирск", "place-4", 5)
+        .tile-grid__item.col-sm-6.col-lg-3
+          +tile("IT-office", "Кемерово", "place-2", 6)
